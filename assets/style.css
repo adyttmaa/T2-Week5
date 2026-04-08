@@ -1,0 +1,151 @@
+/* Custom Styles */
+
+/* Hover effect pada link nav */
+.nav-link:hover {
+    color: #ffc107 !important; /* Warna kuning Bootstrap */
+}
+
+/* Hover effect pada card (Implementasi Box Model & Hover) */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border: 1px solid #ffc107 !important;
+}
+
+/* Jarak Hero agar lebih luas */
+header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+/* Efek tombol yang sedikit terangkat saat disentuh */
+.btn {
+    transition: all 0.3s ease; /* Transisi halus */
+}
+
+.btn:hover {
+    transform: translateY(-3px); /* Box Model: pergerakan posisi */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Bayangan lebih dalam */
+}
+
+/* --- BAGIAN HOME (HERO) --- */
+#home.hero {
+    /* Agar tinggi satu layar penuh di desktop */
+    min-height: 100vh; 
+    
+    /* Warna latar belakang gradient (Poin 2 yang tadi error) */
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    
+    /* Membuat konten di dalamnya (teks & foto) berada di tengah secara vertikal */
+    display: flex;
+    align-items: center;
+    
+    /* Jarak agar tidak tertutup navbar yang melayang */
+    padding-top: 80px; 
+}
+
+/* Aturan Foto Profil (Box Model & Border) */
+.profile-pic {
+    width: 320px;         /* Lebar foto */
+    height: 320px;        /* Tinggi foto */
+    object-fit: cover;    /* Agar foto tidak penyet/distorsi */
+    border: 5px solid white; /* Frame putih di sekeliling foto */
+    transition: transform 0.5s ease; /* Animasi saat disentuh */
+    padding: 0;
+    margin: 0 auto;
+    
+}
+
+/* Hover Effect pada Foto Profil */
+.profile-pic:hover {
+    transform: scale(1.05) rotate(5deg); /* Membesar sedikit dan miring */
+}
+
+/* Container untuk menjaga posisi foto di tengah */
+.profile-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling Kartu Proyek */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Memastikan gambar tidak keluar kotak saat zoom */
+}
+
+/* Hover Effect: Kartu terangkat dan bayangan menebal */
+.project-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* Efek zoom pada gambar saat kartu disentuh */
+.project-card:hover img {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Agar gambar tidak gepeng */
+}
+
+/* Pastikan navigasi berhenti tepat di judul */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+    
+}
+
+/* Mempercantik bagian About */
+#about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.about-img {
+    max-width: 85%;
+    transition: transform 0.4s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.03); /* Efek zoom tipis saat di-hover */
+}
+
+/* Memberi jarak antar section agar scroll terasa lebih lega */
+section {
+    min-height: 80vh; /* Memastikan tiap section cukup panjang */
+    display: flex;
+    align-items: center;
+}
+
+/* Footer Warna Hitam */
+footer.bg-dark {
+    background-color: #212529 !important; /* Warna hitam khas Bootstrap */
+}
+
+/* Styling Ikon Sosial Media di Background Gelap */
+.social-icon-dark {
+    font-size: 1.8rem;
+    color: #f8f9fa; /* Warna putih keabu-abuan */
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+/* Hover Effect: Berubah menjadi Kuning */
+.social-icon-dark:hover {
+    color: #ffc107 !important; /* Senada dengan aksen warna di web kamu */
+    transform: translateY(-5px);
+}
+
+/* Garis pembatas tipis agar tidak terlalu mati */
+footer.border-top {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
